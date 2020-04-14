@@ -53,6 +53,14 @@ class DrawView: UIView {
         }
     }
     
+    func clear() {
+        if ( path != nil ) {
+            path.removeAllPoints()
+            self.layer.sublayers = nil
+            self.setNeedsDisplay()
+        }
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
